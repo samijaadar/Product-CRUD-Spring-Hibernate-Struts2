@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: 2defe81b-fd7c-4508-b767-c4fb8826ed78
+          heroku_app_name: spring-struts
+          heroku_email: jaadar.sami@gmail.com
